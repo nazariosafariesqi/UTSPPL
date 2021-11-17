@@ -5,7 +5,7 @@ name: Generate Cypress Sauce Demo
 on: 
   push:
     branches:
-      - 'master'
+      - 'main'
       
 jobs:
   cypress-test:
