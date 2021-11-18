@@ -1,0 +1,25 @@
+# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-action
+
+name: Testing Cypress Sauce Demo
+on: 
+  push:
+    branches:
+      - 'main'
+      
+jobs:
+  cypress-run:
+    name: Cypress run
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node16.5.0-chrome94-ff93
+    steps:
+     -  name: Checkout
+        uses: actions/checkout@v2
+
+     - name: Cypress run
+       uses: cypress-io/github-action@v2
+       with:
+          project: cypress/integration/3-sauce-demo/cekout1.spec.js
+ 
+        
+        
