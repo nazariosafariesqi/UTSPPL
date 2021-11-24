@@ -1,5 +1,5 @@
 {   
     "ignoreTestFiles": ["**/1-getting-started/*", 
-        "**/2-advanced-examples/*"],
+        "**/2-advanced-examples/*","**/3-sauce-demo/*"],
     "chromeWebSecurity": false
 }
